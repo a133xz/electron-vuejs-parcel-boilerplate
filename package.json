@@ -1,7 +1,7 @@
 {
   "name": "electron-vuejs-parcel",
   "description": "Electron meets Vue.js and Parcel.js, the boilerplate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "Antonio R"
   },

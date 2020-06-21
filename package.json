@@ -11,8 +11,11 @@
     "parcel",
     "vuejs"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a133xz/electron-vuejs-parcel-boilerplate.git"
+  },
   "license": "MIT",
-  "repository": "a133xz/electron-vuejs-parcel-boilerplate",
   "main": "src/electron.js",
   "scripts": {
     "vue-serve": "parcel -p 3000 index.html --out-dir build",

@@ -25,7 +25,8 @@
     "electron-build": "electron-builder -mwl",
     "build:local": "yarn clean-build && yarn vue-build && yarn electron-build",
     "build": "yarn vue-build",
-    "patch": "yarn changelog && npm version patch -m \"v%s\"",
+    "patch": "npm version patch -m \"v%s\"",
+    "postversion": "git push && git push --tags",
     "changelog": "github_changelog_generator -u a133xz -p electron-vuejs-parcel-boilerplate"
   },
   "dependencies": {

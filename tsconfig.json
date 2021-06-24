@@ -11,7 +11,8 @@
         "sourceMap": true,
         "allowJs": true,
         "baseUrl": ".",
-        "noEmit": true
+        "noEmit": true,
+        "jsx": "preserve",
     },
     "include": [
         "./src/**/*.ts",
@@ -22,5 +23,10 @@
         "node_modules",
         "*.js"
     ],
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "paths": {
+        "*": [
+            "./src/@types/*.d.ts"
+        ]
+    },
 }

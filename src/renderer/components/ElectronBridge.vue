@@ -1,7 +1,10 @@
 <template>
-  <button v-on:click="showDialog">Dialog window from Electron</button>
+  <button v-on:click="showDialog">Open a dialog window from Electron</button>
+  <h4>Sending data to Electron</h4>
+  <p>In this case a number to be multiplied by 2 on the background</p>
   <p>
-    <button v-on:click="sendData">Send data to Electron</button>
+    <input v-model="data" type="number" />
+    <button v-on:click="sendData">Send</button>
   </p>
 </template>
 
@@ -33,3 +36,9 @@ export default defineComponent({
   }
 });
 </script>
+
+<style scoped>
+input {
+  margin-right: 5px;
+}
+</style>

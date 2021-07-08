@@ -40,6 +40,9 @@ async function createWindow() {
     });
 
   //win.on("closed", () => (win = null));
+
+  // Menu
+  require("./menu");
 }
 
 // Quit when all windows are closed.
@@ -88,6 +91,6 @@ ipcMain.on("showDialog", () => {
 });
 
 ipcMain.on("doStuffElectron", (event, { data }) => {
-  const reply = data + 100;
+  const reply = data * 2;
   event.reply("doStuffCompleted", reply);
 });

@@ -9,17 +9,20 @@ try {
   require("electron-reloader")(module);
 } catch (_) {}
 
+// Keep a global reference of the window object, if you don't, the window will
+// be closed automatically when the JavaScript object is garbage collected.
+let win;
+
 async function createWindow() {
   // Create the browser window.
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     width: 360,
     height: 450,
     minWidth: 360,
     minHeight: 450,
     icon: path.join(__dirname, "icon.png"),
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"),
-      nodeIntegration: true
+      preload: path.join(__dirname, "preload.js")
     }
   });
 
@@ -90,7 +93,8 @@ ipcMain.on("showDialog", () => {
   });
 });
 
-ipcMain.on("doStuffElectron", (event, { data }) => {
+ipcMain.on("toMain", (event, { data }) => {
   const reply = data * 2;
-  event.reply("doStuffCompleted", reply);
+  event.reply("fromMain", reply);
+  //win.webContents.send("fromMain", reply);
 });

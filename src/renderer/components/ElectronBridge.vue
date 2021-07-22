@@ -16,7 +16,7 @@ const electron = expose.electron;
 export default defineComponent({
   name: "ElectronBridge",
   mounted() {
-    electron.on("doStuffCompleted", (event: any, reply: string) => {
+    electron.receive("fromMain", (reply: number) => {
       alert("Sent to electron: " + this.data + "\nResponse: " + reply);
     });
   },
@@ -31,7 +31,7 @@ export default defineComponent({
     },
     sendData() {
       const data = this.data;
-      electron.send("doStuffElectron", { data });
+      electron.send("toMain", { data });
     }
   }
 });

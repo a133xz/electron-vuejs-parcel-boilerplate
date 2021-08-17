@@ -8,6 +8,8 @@ I added the basic features needed to develop a quick and simple app. Other boile
 
 Using this boilerplate, I developed a [HEIC to PNG/JPG](https://github.com/a133xz/electron-heic-png) converter.
 
+👉 [Download it here.](https://github.com/a133xz/electron-vuejs-parcel-boilerplate/releases/download/v1.0.11/MyApp-1.0.11.dmg)
+
 <img src="https://github.com/a133xz/electron-vuejs-parcel-boilerplate/blob/master/real-world-example.gif?raw=true" width="350">
 
 #### Recommendations
